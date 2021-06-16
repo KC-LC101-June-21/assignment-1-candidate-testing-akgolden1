@@ -24,7 +24,7 @@ let correctAnswers = [
   "3"
 ];
 let candidateAnswers = [];//may not use this
-let correctAnswerCount = 0;
+//let correctAnswerCount = 0;
 
 
 function askForName() {
@@ -63,7 +63,7 @@ candidateAnswers.push(candidateAnswer);
 // I didn't use gradeQuiz() but left it in so the code would run
 function gradeQuiz(candidateAnswers){
 let grade;
- 
+let correctAnswerCount;
 for (let i=0; i<questions.length; i++){
 if (candidateAnswers[i] === correctAnswers[i]){
 correctAnswerCount++;
