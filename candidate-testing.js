@@ -10,7 +10,7 @@ let correctAnswer = "Sally Ride";
 let candidateAnswer ="";
 let questions = [
 "1) Who was the first American woman in space ?",
-"2) True or false: 5 kilometer == 5000 meters ?",
+"2) True or false: 5 kilometer == 5000 meters ?",//this questions is reversed in the report
 "3) (5 + 3)/2 * 10 = ?",
 "4) Given the array [8, 'Orbit', 'Trajectory', 45], what entry is at index 2 ?",
 "5) What is the minimum crew size for the ISS ?"
@@ -48,7 +48,7 @@ candidateAnswer = input.question (questions[i]);
 candidateAnswers.push(candidateAnswer);
   console.log (`Your Answer: ${candidateAnswer}`);
   console.log (`Correct Answer: ${correctAnswers[i]} \n` );
-  console.log (candidateAnswers);
+ 
 //console.log(candidateAnswers);//this works to store the answers in an array!!
 //check to see if it's correct:
 
@@ -61,7 +61,6 @@ candidateAnswers.push(candidateAnswer);
 }
 
 
-// I didn't use gradeQuiz() but left it in so the code would run
 function gradeQuiz(candidateAnswers){
 let grade = 0;
 let correctAnswerCount = 0;
