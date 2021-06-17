@@ -73,13 +73,13 @@ correctAnswerCount++;
 
 grade = (correctAnswerCount/questions.length)*100;
   //try this with the return grade value. runProgram calls grade quiz
-console.log (`>>> Overall Grade:  ${grade}% (${correctAnswerCount} out of 5 respomses correct`);
+console.log (`>>> Overall Grade: ${grade}% (${correctAnswerCount} of 5 responses correct) <<<`);
 
 if (grade >= 80){
-  console.log("Status:  PASSED");
+  console.log(">>> Status: PASSED <<<");
 }
   else{
-  console.log("Status:  FAILED");
+  console.log(">>> Status: FAILED <<<");
   }
 
 
