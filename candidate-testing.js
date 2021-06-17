@@ -3,11 +3,11 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+let candidateName="";
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
 let question = "Who was the first American woman in space? ";
 let correctAnswer = "Sally Ride";
-let candidateAnswer;
+let candidateAnswer="";
 let questions = [
 "1) Who was the first American woman in space?",
 "2) True or false: 5 kilometer == 5000 meters?",
@@ -45,9 +45,10 @@ console.log (candidateAnswer);
 for (let i=0; i<questions.length; i++){
 //next line asks the questions and puts the user answer into candidateAnswer, but I need it to be in an array
 candidateAnswer = input.question (questions[i]);
-
 candidateAnswers.push(candidateAnswer);
-  console.log (`Your Answer: ${candidateAnswer}`);console.log (`Correct Answer: ${correctAnswers[i]} \n` );
+  console.log (`Your Answer: ${candidateAnswer}`);
+  console.log (`Correct Answer: ${correctAnswers[i]} \n` );
+  console.log (candidateAnswers);
 //console.log(candidateAnswers);//this works to store the answers in an array!!
 //check to see if it's correct:
 
@@ -62,7 +63,7 @@ candidateAnswers.push(candidateAnswer);
 
 // I didn't use gradeQuiz() but left it in so the code would run
 function gradeQuiz(candidateAnswers){
-let grade;
+let grade = 0;
 let correctAnswerCount = 0;
 for (let i=0; i<questions.length; i++){
 if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
